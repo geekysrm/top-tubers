@@ -13,7 +13,7 @@ const channels = require("./routes/api/channels");
 require("./models/Channel.js");
 
 // MongoDB configuration
-const db = process.env.mongoURI;
+const db = process.env.MONGO_URI;
 
 // Use mongoose to connect to mongoDB
 mongoose
