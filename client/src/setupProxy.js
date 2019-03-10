@@ -5,4 +5,5 @@ module.exports = function(app) {
   app.use(proxy("/api/", { target: "http://localhost:5000/" }));
   app.use(proxy("/profile/", { target: "http://localhost:5000/" }));
   app.use(proxy("/posts/", { target: "http://localhost:5000/" }));
+  app.use(proxy("/channels/", { target: "http://localhost:5000/" }));
 };

@@ -1,8 +1,15 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import Loader from "react-loader-spinner";
 import "./TopChannels.css";
 import ChannelListItem from "./ChannelListItem";
+import { getTopChannels } from "../../actions/channelActions";
 
-export default class TopChannels extends Component {
+class TopChannels extends Component {
+  async componentDidMount() {
+    await this.props.getTopChannels();
+  }
+
   render() {
     return (
       <div>
@@ -12,13 +19,26 @@ export default class TopChannels extends Component {
               <h5>TopYT</h5>
               <h1>Top Youtube Channels</h1>
             </div>
-            <div className="list__body">
-              <table className="list__table">
-                <tbody>
-                  <ChannelListItem />
-                </tbody>
-              </table>
-            </div>
+            {this.props.channels.all.length !== 0 ? (
+              <div className="list__body">
+                <table className="list__table">
+                  <tbody>
+                    {this.props.channels.all.map(channel => (
+                      <ChannelListItem key={channel.rank} />
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : (
+              <div className="loader">
+                <Loader
+                  type="Triangle"
+                  color="#DC143C"
+                  height="100"
+                  width="100"
+                />
+              </div>
+            )}
           </div>
         </div>
         <div className="overlay" />
@@ -26,3 +46,12 @@ export default class TopChannels extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  channels: state.channels
+});
+
+export default connect(
+  mapStateToProps,
+  { getTopChannels }
+)(TopChannels);
