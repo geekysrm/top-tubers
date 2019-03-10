@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 
 // const auth = require("./routes/api/auth");
 // const posts = require("./routes/api/posts");
+const channels = require("./routes/api/channels");
 
 require("./models/Channel.js");
 
@@ -25,6 +26,7 @@ mongoose
 
 // require("./routes/api/auth.js")(app);
 // require("./routes/api/posts.js")(app);
+require("./routes/api/channels.js")(app);
 
 // Server static assets if in production
 if (process.env.NODE_ENV === "production") {
