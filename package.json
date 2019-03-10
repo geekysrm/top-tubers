@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "MERN stack app which shows top youtubers with their details",
   "main": "server.js",
+  "engines": {
+    "node": "10.3.0"
+  },
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "node server.js",
