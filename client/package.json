@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "http-proxy-middleware": "^0.19.1",
+    "millify": "^2.0.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-loader-spinner": "^2.3.0",

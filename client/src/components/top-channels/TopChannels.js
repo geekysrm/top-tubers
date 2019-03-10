@@ -24,7 +24,7 @@ class TopChannels extends Component {
                 <table className="list__table">
                   <tbody>
                     {this.props.channels.all.map(channel => (
-                      <ChannelListItem key={channel.rank} />
+                      <ChannelListItem key={channel.rank} rank={channel.rank} videoUploads={channel.videoUploads} videoViews={channel.videoViews} subscribers={channel.subscribers} grade={channel.grade} channelName={channel.channelName}  />
                     ))}
                   </tbody>
                 </table>
