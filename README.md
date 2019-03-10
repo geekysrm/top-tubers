@@ -4,10 +4,9 @@ An aggregator of the top channels in Youtube.
 
 ## Technologies used
 
-- [Node.JS](http://nodejs.org/) - Node.JS is used in the backend.
-- [React.JS](https://reactjs.org/) -Frontend library used in the project.
-- [Redux](https://redux.js.org/) - Used in addition to React.JS
-- MongoDB - Database
+- React JS with Redux
+- Node.js
+- MongoDB
 
 ## Getting Started
 
@@ -19,7 +18,23 @@ _Node.JS and npm must be installed. Download and install them from [here](https:
 
 The `channels.csv` file provided has been imported to mongoDB database as `channels` collection.
 
-### Running in local environment
+### Installing
+
+Follow these steps to run this project in your local computer.
+
+```
+$ https://github.com/geekysrm/mern-boilerplate.git
+$ cd mern-boilerplate
+```
+
+Now, create a `keys.js` file inside `config` folder with the following variables:
+
+```
+module.exports = {
+  mongoURI: YOUR_MOGODB_URI
+};
+
+```
 
 Now run :
 
@@ -46,10 +61,11 @@ To run only the client, run:
 $ npm run client
 ```
 
-## Screenshots
+## Built With
 
-Included in the `screenshots` folder in root of the project
-
+- [Node.JS](http://nodejs.org/) - Node.JS is used in the backend.
+- [React.JS](https://reactjs.org/) -Frontend library used in the project.
+- [Redux](https://redux.js.org/) - Used in addition to React.JS
 
 ## Authors
 

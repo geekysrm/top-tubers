@@ -3,8 +3,8 @@ import React, { Component } from "react";
 class ChannelPage extends Component {
   render() {
     return (
-      <div>
-        Channel Page
+      <div style={{color: "#fff"}}>
+        Channel Page for Rank
         {this.props.match.params.id}
       </div>
     );

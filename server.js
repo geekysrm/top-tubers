@@ -1,22 +1,19 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const passport = require("passport");
-const cookieSession = require("cookie-session");
 const bodyParser = require("body-parser");
 const path = require("path");
+require('dotenv').config()
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// const auth = require("./routes/api/auth");
-// const posts = require("./routes/api/posts");
 const channels = require("./routes/api/channels");
 
 require("./models/Channel.js");
 
 // MongoDB configuration
-const db = require("./config/keys").mongoURI;
+const db = process.env.mongoURI;
 
 // Use mongoose to connect to mongoDB
 mongoose
@@ -24,8 +21,6 @@ mongoose
   .then(() => console.log("MongoDB connected successfully!"))
   .catch(err => console.log(err));
 
-// require("./routes/api/auth.js")(app);
-// require("./routes/api/posts.js")(app);
 require("./routes/api/channels.js")(app);
 
 // Server static assets if in production
