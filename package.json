@@ -1,7 +1,7 @@
 {
-  "name": "top-yt",
+  "name": "top-tubers",
   "version": "1.0.0",
-  "description": "MERN stack app which shows top youtubers with their details",
+  "description": "An aggregator of the top channels in Youtube.",
   "main": "server.js",
   "engines": {
     "node": "10.3.0"
