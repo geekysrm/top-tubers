@@ -1,11 +1,8 @@
 body {
   margin-bottom: 100px !important;
-  /* overflow: hidden; */
 }
 
-
-
-footer {
+ footer {
   position: fixed;
   bottom: 0;
   left: 0;

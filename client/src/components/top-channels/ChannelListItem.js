@@ -1,10 +1,10 @@
 import React from "react";
 import millify from 'millify';
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
+// TODO: To add link to channel pages
 
 const ChannelListItem = (props) =>
-    (<Link to={`/${props.rank}`}>
-      <tr className="list__row">
+    (  <tr className="list__row">
         <td className="list__cell">
           <span className="list__value">{props.rank}</span>
         </td>
@@ -25,6 +25,5 @@ const ChannelListItem = (props) =>
           <small className="list__label">subscribers</small>
         </td>
       </tr>
-      </Link>
     );
 export default ChannelListItem;
